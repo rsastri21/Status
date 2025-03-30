@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1C91DF532D99EEF800DBAACB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF4F2D99EEF800DBAACB /* ContentView.swift */; };
+		1C91DF542D99EEF800DBAACB /* StatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF512D99EEF800DBAACB /* StatusApp.swift */; };
+		1C91DF552D99EEF800DBAACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C91DF4C2D99EEF800DBAACB /* Preview Assets.xcassets */; };
+		1C91DF562D99EEF800DBAACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C91DF4E2D99EEF800DBAACB /* Assets.xcassets */; };
+		1C91DF5A2D99EF2800DBAACB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C91DF592D99EF2800DBAACB /* KeychainSwift */; };
+		1C91DF5C2D99EF4800DBAACB /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF5B2D99EF4800DBAACB /* KeychainStorage.swift */; };
+		1C91DF612D99EFD700DBAACB /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF602D99EFD700DBAACB /* Credentials.swift */; };
+		1C91DF632D99F3C600DBAACB /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF622D99F3C600DBAACB /* AuthToken.swift */; };
+		1C91DF662D99F93600DBAACB /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF652D99F93600DBAACB /* Authentication.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1C91DF302D99ED2200DBAACB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +39,18 @@
 		1C91DF1E2D99ED2000DBAACB /* Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Status.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C91DF2F2D99ED2200DBAACB /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C91DF392D99ED2200DBAACB /* StatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C91DF4C2D99EEF800DBAACB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1C91DF4E2D99EEF800DBAACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C91DF4F2D99EEF800DBAACB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C91DF502D99EEF800DBAACB /* Status.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Status.entitlements; sourceTree = "<group>"; };
+		1C91DF512D99EEF800DBAACB /* StatusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusApp.swift; sourceTree = "<group>"; };
+		1C91DF5B2D99EF4800DBAACB /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		1C91DF602D99EFD700DBAACB /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		1C91DF622D99F3C600DBAACB /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		1C91DF652D99F93600DBAACB /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		1C91DF202D99ED2000DBAACB /* Status */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Status;
-			sourceTree = "<group>";
-		};
 		1C91DF322D99ED2200DBAACB /* StatusTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = StatusTests;
@@ -52,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C91DF5A2D99EF2800DBAACB /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +92,7 @@
 		1C91DF152D99ED2000DBAACB = {
 			isa = PBXGroup;
 			children = (
-				1C91DF202D99ED2000DBAACB /* Status */,
+				1C91DF522D99EEF800DBAACB /* Status */,
 				1C91DF322D99ED2200DBAACB /* StatusTests */,
 				1C91DF3C2D99ED2200DBAACB /* StatusUITests */,
 				1C91DF1F2D99ED2000DBAACB /* Products */,
@@ -90,6 +107,54 @@
 				1C91DF392D99ED2200DBAACB /* StatusUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1C91DF4D2D99EEF800DBAACB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1C91DF4C2D99EEF800DBAACB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1C91DF522D99EEF800DBAACB /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				1C91DF642D99F91D00DBAACB /* Views */,
+				1C91DF5D2D99EF8300DBAACB /* Models */,
+				1C91DF572D99EF0200DBAACB /* Services */,
+				1C91DF512D99EEF800DBAACB /* StatusApp.swift */,
+				1C91DF652D99F93600DBAACB /* Authentication.swift */,
+				1C91DF4E2D99EEF800DBAACB /* Assets.xcassets */,
+				1C91DF502D99EEF800DBAACB /* Status.entitlements */,
+				1C91DF4D2D99EEF800DBAACB /* Preview Content */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		1C91DF572D99EF0200DBAACB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1C91DF5B2D99EF4800DBAACB /* KeychainStorage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1C91DF5D2D99EF8300DBAACB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C91DF602D99EFD700DBAACB /* Credentials.swift */,
+				1C91DF622D99F3C600DBAACB /* AuthToken.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C91DF642D99F91D00DBAACB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C91DF4F2D99EEF800DBAACB /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,11 +172,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				1C91DF202D99ED2000DBAACB /* Status */,
-			);
 			name = Status;
 			packageProductDependencies = (
+				1C91DF592D99EF2800DBAACB /* KeychainSwift */,
 			);
 			productName = Status;
 			productReference = 1C91DF1E2D99ED2000DBAACB /* Status.app */;
@@ -195,6 +258,9 @@
 			);
 			mainGroup = 1C91DF152D99ED2000DBAACB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1C91DF582D99EF2800DBAACB /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1C91DF1F2D99ED2000DBAACB /* Products */;
 			projectDirPath = "";
@@ -212,6 +278,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C91DF552D99EEF800DBAACB /* Preview Assets.xcassets in Resources */,
+				1C91DF562D99EEF800DBAACB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C91DF532D99EEF800DBAACB /* ContentView.swift in Sources */,
+				1C91DF542D99EEF800DBAACB /* StatusApp.swift in Sources */,
+				1C91DF612D99EFD700DBAACB /* Credentials.swift in Sources */,
+				1C91DF632D99F3C600DBAACB /* AuthToken.swift in Sources */,
+				1C91DF5C2D99EF4800DBAACB /* KeychainStorage.swift in Sources */,
+				1C91DF662D99F93600DBAACB /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +460,7 @@
 		1C91DF442D99ED2200DBAACB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Status/Status.entitlements;
@@ -396,6 +471,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Status;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow Face ID to access stored credentials";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -406,18 +484,21 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsastri.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -425,6 +506,7 @@
 		1C91DF452D99ED2200DBAACB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Status/Status.entitlements;
@@ -435,6 +517,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Status;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Allow Face ID to access stored credentials";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -445,18 +530,21 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsastri.Status;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -591,6 +679,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C91DF582D99EF2800DBAACB /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C91DF592D99EF2800DBAACB /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C91DF582D99EF2800DBAACB /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C91DF162D99ED2000DBAACB /* Project object */;
 }
