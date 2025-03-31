@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct StatusApp: App {
+    
+    @State private var authentication = Authentication()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authentication.isValidated {
+                ContentView()
+                    .environment(authentication)
+            } else {
+                LoginView()
+                    .environment(authentication)
+            }
         }
     }
 }

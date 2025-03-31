@@ -26,6 +26,8 @@ import LocalAuthentication
         case noFingerprintEnrolled
         case biometricError
         case credentialsNotSaved
+        case noAccountFound
+        case unsuccessfulSignIn
         
         var id: String {
             self.localizedDescription
@@ -45,6 +47,10 @@ import LocalAuthentication
                 return NSLocalizedString("Your face or fingerprint was not recognized.", comment: "")
             case .credentialsNotSaved:
                 return NSLocalizedString("Your credentials have not been saved. Do you want to save them after the next successful login?", comment: "")
+            case .noAccountFound:
+                return NSLocalizedString("No account found. Please sign-up first.", comment: "")
+            case .unsuccessfulSignIn:
+                return NSLocalizedString("Could not process your request. Try again later.", comment: "")
             }
         }
     }

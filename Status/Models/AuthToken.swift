@@ -14,12 +14,14 @@ struct AuthToken: Codable {
     
     func encoded() -> String {
         let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .millisecondsSince1970
         let authTokenData = try! encoder.encode(self)
         return String(data: authTokenData, encoding: .utf8)!
     }
     
     static func decode(_ authTokenString: String) -> AuthToken {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
         let jsonData = authTokenString.data(using: .utf8)!
         return try! decoder.decode(AuthToken.self, from: jsonData)
     }
