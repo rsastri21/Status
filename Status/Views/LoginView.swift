@@ -85,7 +85,6 @@ struct LoginView: View {
         .textFieldStyle(RoundedTextFieldStyle())
         .padding()
         .disabled(loginVM.showProgressView)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .alert(item: $loginVM.error) { error in
             if error == .credentialsNotSaved {
                 return Alert(title: Text("Credentials Not Saved"),
