@@ -25,7 +25,9 @@ struct LoginView: View {
                 .font(.system(size: 56, weight: .semibold))
             VStack {
                 TextField("Username", text: $loginVM.credentials.username)
+                    .textContentType(.username)
                 SecureField("Password", text: $loginVM.credentials.password)
+                    .textContentType(.password)
             }
             VStack {
                 Button {
