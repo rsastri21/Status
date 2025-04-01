@@ -33,15 +33,17 @@ struct LoginView: View {
                         authentication.updateValidation(success: success)
                     }
                 } label: {
-                    Text("Sign in")
-                        .foregroundStyle(loginVM.loginDisabled ? .black : .white)
-                        .padding(.vertical)
-                    if loginVM.showProgressView {
-                        ProgressView()
+                    HStack {
+                        Text("Sign in")
+                            .foregroundStyle(loginVM.loginDisabled ? .black : .white)
+                            .padding(.vertical)
+                        if loginVM.showProgressView {
+                            ProgressView()
+                        }
                     }
+                    .frame(minWidth: 100, maxWidth: .infinity, minHeight: 54, maxHeight: 54)
                 }
                 .disabled(loginVM.loginDisabled)
-                .frame(minWidth: 100, maxWidth: .infinity, minHeight: 54, maxHeight: 54)
                 .background(.cyan)
                 .cornerRadius(16)
                 
