@@ -17,19 +17,15 @@ struct LoginView: View {
             Image(systemName: "camera.shutter.button")
                 .symbolRenderingMode(.hierarchical)
                 .foregroundStyle(.cyan)
-                .font(.system(size: 100, weight: .medium))
+                .font(.system(size: 80, weight: .medium))
                 .onTapGesture {
                     UIApplication.shared.endEditing()
                 }
             Text("Status")
-                .font(.system(size: 64, weight: .semibold))
+                .font(.system(size: 56, weight: .semibold))
             VStack {
                 TextField("Username", text: $loginVM.credentials.username)
-                    .keyboardType(.emailAddress)
                 SecureField("Password", text: $loginVM.credentials.password)
-            }
-            if loginVM.showProgressView {
-                ProgressView()
             }
             VStack {
                 Button {
@@ -38,11 +34,14 @@ struct LoginView: View {
                     }
                 } label: {
                     Text("Sign in")
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(loginVM.loginDisabled ? .black : .white)
                         .padding(.vertical)
-                        .frame(minWidth: 100, maxWidth: .infinity, minHeight: 40)
+                    if loginVM.showProgressView {
+                        ProgressView()
+                    }
                 }
                 .disabled(loginVM.loginDisabled)
+                .frame(minWidth: 100, maxWidth: .infinity, minHeight: 54, maxHeight: 54)
                 .background(.cyan)
                 .cornerRadius(16)
                 
@@ -79,8 +78,10 @@ struct LoginView: View {
                 }
             }
         }
-        .padding()
+        .textInputAutocapitalization(.never)
+        .autocorrectionDisabled()
         .textFieldStyle(RoundedTextFieldStyle())
+        .padding()
         .disabled(loginVM.showProgressView)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .alert(item: $loginVM.error) { error in

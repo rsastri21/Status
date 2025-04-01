@@ -73,10 +73,16 @@ class LoginViewModel {
                 let authToken = AuthToken(authToken: signInResponse.authToken, user: self.credentials.username, expiresAt: signInResponse.expiresAt)
                 let _ = KeychainStorage.saveAuthToken(authToken)
                 
+                // Save credentials
+                if self.storeCredentialsNext && KeychainStorage.saveCredentials(self.credentials) {
+                    self.storeCredentialsNext = false
+                }
+                
                 completion(true)
             default:
                 self.error = .unsuccessfulSignIn
             }
         }
+        .resume()
     }
 }

@@ -28,6 +28,7 @@ import LocalAuthentication
         case credentialsNotSaved
         case noAccountFound
         case unsuccessfulSignIn
+        case unsuccessfulSignOut
         
         var id: String {
             self.localizedDescription
@@ -51,6 +52,8 @@ import LocalAuthentication
                 return NSLocalizedString("No account found. Please sign-up first.", comment: "")
             case .unsuccessfulSignIn:
                 return NSLocalizedString("Could not process your request. Try again later.", comment: "")
+            case .unsuccessfulSignOut:
+                return NSLocalizedString("Could not sign out. Try again later.", comment: "")
             }
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C38E4122D9B6F960038A4A7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E4112D9B6F960038A4A7 /* ContentViewModel.swift */; };
 		1C91DF532D99EEF800DBAACB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF4F2D99EEF800DBAACB /* ContentView.swift */; };
 		1C91DF542D99EEF800DBAACB /* StatusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91DF512D99EEF800DBAACB /* StatusApp.swift */; };
 		1C91DF552D99EEF800DBAACB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C91DF4C2D99EEF800DBAACB /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C38E4112D9B6F960038A4A7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1C91DF1E2D99ED2000DBAACB /* Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Status.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C91DF2F2D99ED2200DBAACB /* StatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C91DF392D99ED2200DBAACB /* StatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 				1C91DF4F2D99EEF800DBAACB /* ContentView.swift */,
 				1C91DF672D9A18D600DBAACB /* LoginView.swift */,
 				1C91DF692D9A192300DBAACB /* LoginViewModel.swift */,
+				1C38E4112D9B6F960038A4A7 /* ContentViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				1C91DF632D99F3C600DBAACB /* AuthToken.swift in Sources */,
 				1C91DF6C2D9A1C9E00DBAACB /* SignInResponse.swift in Sources */,
 				1C91DF5C2D99EF4800DBAACB /* KeychainStorage.swift in Sources */,
+				1C38E4122D9B6F960038A4A7 /* ContentViewModel.swift in Sources */,
 				1C91DF712D9A388B00DBAACB /* UIApplication+Extension.swift in Sources */,
 				1C91DF662D99F93600DBAACB /* Authentication.swift in Sources */,
 				1C91DF6F2D9A373300DBAACB /* RoundedTextFieldStyle.swift in Sources */,

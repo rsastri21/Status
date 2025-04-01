@@ -46,6 +46,14 @@ enum KeychainStorage {
         }
     }
     
+    static func removeAuthToken() -> Bool {
+        if keychain.delete(authTokenKey) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     static func hasStoredAuthToken() -> Bool {
         if var authToken = getAuthToken() {
             if Date() < authToken.expiresAt {
@@ -56,6 +64,7 @@ enum KeychainStorage {
                 let _ = saveAuthToken(authToken)
                 return true
             }
+            let _ = removeAuthToken()
         }
         return false
     }
