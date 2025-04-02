@@ -29,6 +29,7 @@ import LocalAuthentication
         case noAccountFound
         case unsuccessfulSignIn
         case unsuccessfulSignOut
+        case unsuccessfulRegistration
         
         var id: String {
             self.localizedDescription
@@ -54,6 +55,8 @@ import LocalAuthentication
                 return NSLocalizedString("Could not process your request. Try again later.", comment: "")
             case .unsuccessfulSignOut:
                 return NSLocalizedString("Could not sign out. Try again later.", comment: "")
+            case .unsuccessfulRegistration:
+                return NSLocalizedString("Could not sign up. Ensure your username is unique before trying again.", comment: "")
             }
         }
     }

@@ -14,6 +14,7 @@ class LoginViewModel {
     var showProgressView: Bool = false
     var error: Authentication.AuthenticationError?
     var storeCredentialsNext: Bool = false
+    var presentSignUpView = false
     
     var loginDisabled: Bool {
         credentials.username.isEmpty || credentials.password.isEmpty
