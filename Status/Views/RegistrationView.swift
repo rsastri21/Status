@@ -47,6 +47,9 @@ struct RegistrationView: View {
                 }
                 Spacer()
                 Button {
+                    Task {
+                        await registrationVM.signUp(showingSignUp: $showingSignUp)
+                    }
                 } label: {
                     HStack {
                         Text("Sign up")
@@ -76,6 +79,16 @@ struct RegistrationView: View {
             }
             .toolbarBackground(.regularMaterial, for: .navigationBar)
             .toolbarBackgroundVisibility(.visible, for: .navigationBar)
+            .alert("Registration failed", isPresented: $registrationVM.showError, presenting: registrationVM.error) { _ in
+                Button {
+                    registrationVM.status = .idle
+                    registrationVM.error = nil
+                } label: {
+                    Text("OK")
+                }
+            } message: { error in
+                Text(error.localizedDescription)
+            }
         }
     }
 }

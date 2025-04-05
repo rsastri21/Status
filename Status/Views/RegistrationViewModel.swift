@@ -5,6 +5,7 @@
 //  Created by Rohan Sastri on 4/1/25.
 //
 
+import SwiftUI
 import Observation
 import Foundation
 
@@ -19,12 +20,14 @@ class RegistrationViewModel {
     
     var registration = Registration()
     var status: RegistrationStatus = .idle
+    var error: Authentication.AuthenticationError?
+    var showError: Bool = false
     
     var signUpDisabled: Bool {
         registration.email.isEmpty || registration.password.isEmpty || registration.name.isEmpty || registration.username.isEmpty || registration.password.count < 8
     }
     
-    func signUp() async {
+    func signUp(showingSignUp: Binding<Bool>) async {
         status = .inflight
         
         guard let encoded = try? JSONEncoder().encode(registration) else {
@@ -45,20 +48,30 @@ class RegistrationViewModel {
             guard let httpResponse = response as? HTTPURLResponse else {
                 print("Invalid response.")
                 status = .failure
+                error = .unsuccessfulRegistration
+                showError = true
                 return
             }
             
             switch httpResponse.statusCode {
-            case 200:
+            case 201:
                 status = .success
+                error = nil
+                showingSignUp.wrappedValue = false
             case 400:
                 status = .failure
+                error = .unsuccessfulRegistration
+                showError = true
             default:
                 status = .failure
+                error = .unsuccessfulRegistration
+                showError = true
             }
         } catch {
             print("Failed to register: \(error.localizedDescription)")
             status = .failure
+            self.error = .unsuccessfulRegistration
+            showError = true
         }
     }
     
