@@ -88,7 +88,7 @@ struct LoginView: View {
                         loginVM.presentSignUpView.toggle()
                     }
                     .navigationDestination(isPresented: $loginVM.presentSignUpView) {
-                        RegistrationView(showingSignUp: $loginVM.presentSignUpView)
+                        RegistrationView(showingSignUp: $loginVM.presentSignUpView, credentials: $loginVM.credentials)
                     }
                         
                 }

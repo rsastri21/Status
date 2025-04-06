@@ -11,6 +11,7 @@ struct RegistrationView: View {
     
     @State private var registrationVM = RegistrationViewModel()
     @Binding var showingSignUp: Bool
+    @Binding var credentials: Credentials
     
     var body: some View {
         NavigationStack {
@@ -48,7 +49,7 @@ struct RegistrationView: View {
                 Spacer()
                 Button {
                     Task {
-                        await registrationVM.signUp(showingSignUp: $showingSignUp)
+                        await registrationVM.signUp(showingSignUp: $showingSignUp, credentials: $credentials)
                     }
                 } label: {
                     HStack {
@@ -94,5 +95,5 @@ struct RegistrationView: View {
 }
 
 #Preview {
-    RegistrationView(showingSignUp: .constant(true))
+    RegistrationView(showingSignUp: .constant(true), credentials: .constant(Credentials()))
 }

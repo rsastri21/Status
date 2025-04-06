@@ -27,7 +27,7 @@ class RegistrationViewModel {
         registration.email.isEmpty || registration.password.isEmpty || registration.name.isEmpty || registration.username.isEmpty || registration.password.count < 8
     }
     
-    func signUp(showingSignUp: Binding<Bool>) async {
+    func signUp(showingSignUp: Binding<Bool>, credentials: Binding<Credentials>) async {
         status = .inflight
         
         guard let encoded = try? JSONEncoder().encode(registration) else {
@@ -58,6 +58,8 @@ class RegistrationViewModel {
                 status = .success
                 error = nil
                 showingSignUp.wrappedValue = false
+                credentials.wrappedValue.password = registration.password
+                credentials.wrappedValue.username = registration.username
             case 400:
                 status = .failure
                 error = .unsuccessfulRegistration
